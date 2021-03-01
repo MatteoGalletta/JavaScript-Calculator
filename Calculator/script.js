@@ -83,21 +83,22 @@ document.addEventListener('keydown', function (event) {
         return;
     
     // The key pressed by the user gets handled.
-    handleUserInput(event.key.toLowerCase());
-
-    event.preventDefault();
+    if(handleUserInput(event.key.toLowerCase()))
+        event.preventDefault();
 });
 
 function handleUserInput(char) {
+    console.log(char);
     switch (char) {
         case 'enter': char = '='; break;
         case '*': char = '×'; break;
         case '/': char = '÷'; break;
     }
 
-    try { document.getElementById(char).focus(); } catch (e) { return; }
+    try { document.getElementById(char).focus(); } catch (e) { return false; }
 
     handle(char);
+    return true;
 }
 
 function handleButton(button) {
