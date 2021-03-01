@@ -1,0 +1,92 @@
+/*
+    Copyright 2021 Matteo Galletta
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    ------------------------------------------
+
+    CALCULATOR made in HTML, CSS e JavaScript
+
+    made by: Matteo Galletta
+    
+    version: 1.1
+
+    GitHub Repository at
+        https://github.com/MatteoGalletta/JavaScript-Calculator
+
+    TODO:
+        -Add MRC / M+ / M- buttons;
+        -Add CE button;
+        -Add Percentage button;
+        -Add 1/x button;
+        -Add Factorial;
+        -Add Logarithms;
+        -Add sin/cos and tan functions.
+*/
+body {
+    width: auto;
+    text-align: center;
+    margin: 0; margin-top: 10px;
+    padding: 0;
+}
+#content {
+    width: 359px;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 95);
+    box-shadow: 3px 3px rgba(0, 0, 95, 0.5);
+    text-align: center;
+    display: grid;
+}
+#display, #displayMini {
+    width: 340px;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    outline: none;
+    border: 0;
+    color: rgb(0, 0, 95);
+    background-color: rgba(0,0,0,0);
+    text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+#displayMini {
+    font-size: 25px;
+    color: rgb(23, 23, 138);
+    background-color: rgba(0,0,0,0);
+}
+#output {
+    width: 340px;
+    overflow: hidden;
+    margin: 10px;
+    display: block;
+    border: 0;
+    border-radius: 10px;
+    background-color: aliceblue;
+    box-shadow: -2px -2px rgba(247, 247, 247, 0.5);
+}
+.button {
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    font-size: 30px;
+    border-radius: 10px; /* 37.5 per cerchi*/
+    background-color: rgb(51,51,127);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    color: rgb(161, 161, 214);
+    border: 0;
+    outline: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button:hover, .button:focus {
+    background-color: rgb(87, 87, 148);
+    box-shadow: 1px 1px rgba(255,255,255,0.5);
+}
